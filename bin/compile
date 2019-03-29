@@ -17,9 +17,9 @@ echo "The current stack version: ${STACK}"
 PROJECT_VERSION=$(grep -oPm1 "(?<=<TargetFramework>)[^<]+" ${BUILD_DIR}/*.csproj)
 echo "The current project version: ${PROJECT_VERSION}"
 
-NETCORE_VERSION="3.0.100-preview2"
+NETCORE_VERSION="3.0.100-preview3"
 if [ $PROJECT_VERSION == "netcoreapp3.0" ]; then
-	NETCORE_VERSION="3.0.100-preview2"
+	NETCORE_VERSION="3.0.100-preview3"
 elif [ $PROJECT_VERSION == "netcoreapp2.2" ]; then
 	NETCORE_VERSION="2.2.1"
 fi
